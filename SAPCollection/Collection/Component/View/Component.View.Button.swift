@@ -16,7 +16,7 @@ public protocol ComponentButtonSkinable: Skinable {
     func draw(rect: CGRect, stateTransition: ButtonTransitionStates, stateProgress: CGFloat)
 }
 
-public protocol ComponentButtonDelegate: class {
+public protocol ComponentButtonDelegate: AnyObject {
     func touchDown(sender: Component.View.Button)
     func touchUpInside(sender: Component.View.Button)
     func touchUpOutside(sender: Component.View.Button)
@@ -221,11 +221,21 @@ extension Component.View.Button {
     }
     
     public func setTitle(_ title: String?, for state: State) {
-        skin.titleAttributes[state]?.title = title
+        if skin.titleAttributes[state] == nil {
+            skin.titleAttributes[state] = (title: title, color: nil, font: nil)
+        } else {
+            skin.titleAttributes[state]?.title = title
+        }
         if state == .normal {
-            skin.titleAttributes[.highlighted]?.title = skin.titleAttributes[.highlighted]?.title ?? title
-            skin.titleAttributes[.disabled]?.title = skin.titleAttributes[.disabled]?.title ?? title
-            skin.titleAttributes[.selected]?.title = skin.titleAttributes[.selected]?.title ?? title
+            if skin.titleAttributes[.highlighted] == nil {
+                skin.titleAttributes[.highlighted] = (title: title, color: nil, font: nil)
+            }
+            if skin.titleAttributes[.disabled] == nil {
+                skin.titleAttributes[.disabled] = (title: title, color: nil, font: nil)
+            }
+            if skin.titleAttributes[.selected] == nil {
+                skin.titleAttributes[.selected] = (title: title, color: nil, font: nil)
+            }
         }
     }
     

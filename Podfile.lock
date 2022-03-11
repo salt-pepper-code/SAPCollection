@@ -1,19 +1,19 @@
 PODS:
-  - Cartography (3.1.0)
-  - Macaw (0.9.4):
+  - Cartography (4.0.0)
+  - Macaw (0.9.9):
     - SWXMLHash
   - MKTween (4.1)
-  - SwiftGen (6.1.0)
-  - SWXMLHash (4.9.0)
+  - SwiftGen (6.5.1)
+  - SWXMLHash (6.0.0)
 
 DEPENDENCIES:
   - Cartography
-  - Macaw (= 0.9.4)
+  - Macaw
   - MKTween
   - SwiftGen
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Cartography
     - Macaw
     - MKTween
@@ -21,12 +21,12 @@ SPEC REPOS:
     - SWXMLHash
 
 SPEC CHECKSUMS:
-  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
-  Macaw: f3c3051fb580484c221159f4cf340736bb2b166f
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  Macaw: d683339ff44d49c16776ec2bde7aecfd4ba2a3a4
   MKTween: 2a35a33dd9ad21a8ff16ab5ede150e9a69c85859
-  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
-  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SWXMLHash: 9d851ed3edf48ec2bd0db98f0cda0ad4136d75e3
 
-PODFILE CHECKSUM: a02dccc344cb4ccacea7a1bf930d9dea39401fe2
+PODFILE CHECKSUM: 0656f3944743b38bef8ee14e55a12db49b91b5c9
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.11.2
